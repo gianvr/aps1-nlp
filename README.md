@@ -43,12 +43,10 @@ Caso esteja executando no monstrão, acesse o endereço `http://10.103.0.28:2206
 Para realizar consultas, acesse o endereço:
 ```
 http://127.0.0.1:2206/query?query={QUERY}
-
 ```
 No monstrão:
 ```
 http://10.103.0.28:2206/query?query={QUERY}
-
 ```
 
 Sendo `{QUERY}` o texto que deseja realizar a consulta.
