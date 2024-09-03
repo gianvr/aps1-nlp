@@ -17,4 +17,4 @@ def get_recommendation(query, threshold=0.1):
     R = R.sort_values("Relevance", ascending=False)
     R = R[R["Relevance"] > threshold]
     
-    return R
+    return R.head(10)
