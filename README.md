@@ -31,16 +31,23 @@ pip install -r requirements.txt
 Para executar o projeto, execute o comando abaixo:
 
 ```bash
-unicorn app.main:app --reload
+uvicorn app.main:app --host 0.0.0.0 --port 2206
 ```
 
-Caso esteja executando localmente o projeto, acesse o endereço `http://127.0.0.1:8000/hello` para verificar se o projeto está rodando corretamente.
+Caso esteja executando localmente o projeto, acesse o endereço `http://127.0.0.1:2206/hello` para verificar se o projeto está rodando corretamente.
+
+Caso esteja executando no monstrão, acesse o endereço `http://10.103.0.28:2206/hello`
 
 ### Realizando consultas
 
 Para realizar consultas, acesse o endereço:
 ```
-http://127.0.0.1:8000/query?query={QUERY}
+http://127.0.0.1:2206/query?query={QUERY}
+
+```
+No monstrão:
+```
+http://10.103.0.28:2206/query?query={QUERY}
 
 ```
 
