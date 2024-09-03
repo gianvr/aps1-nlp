@@ -1,5 +1,17 @@
 # Recomendação de Tweets sobre o Coronavírus
 
+## Desenvolvedor
+
+</div >
+
+<div align="center" style="max-width:68rem;">
+<table>
+  <tr>
+   <td align="center"><a href="https://github.com/gianvr"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/gianvr" width="100px;" alt=""/><br /><sub><b>Giancarlo Vanoni</b></sub></a><br /><a href="https://github.com/gianvr" title="Giancarlo Vanoni"></a> Developer</td>
+  </tr>
+</table>
+</div>
+
 ## Descrição
 
 Dada uma query, o modelo é capaz de retornar tweets relacionados ao Coronavírus que possuem esse tema. Foi utilizado o algoritmo TF-IDF para retornar os tweets mais relevantes.
@@ -48,6 +60,8 @@ pytest:
 pytest test/test_query.py::test_query_yields_10_results
 ```
 
+A maioria dos tweets estão relacionados a fala do Donald Trump sobre o Coronavírus ser uma farsa.
+
 ### Teste que retorna mais que 1 e menos que 10 tweets
 
 Query:
@@ -59,6 +73,8 @@ pytest:
 ```bash
 pytest test/test_query.py::test_query_yields_few_results
 ```
+
+Foram retornados apenas 2 tweets, que falam sobre o Coronavírus e a H1N1.
 
 ### Teste que retorna algo não óbvio
 
@@ -77,7 +93,3 @@ O motivo de ser algo não óbvio é porque apesar do termo "public transport" s�
 ## Dataset
 
 O dataset utilizado no projeto foi: [CoronaVirus Tweets Dataset](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification?select=Corona_NLP_train.csv).
-
-## Authors
-
-Giancarlo Vanoni Ruggiero
