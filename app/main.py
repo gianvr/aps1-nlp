@@ -23,7 +23,6 @@ def query_route(query: str = Query(..., description="Search query")):
                 "relevance": row["Relevance"],
             }
         )
-    print(len(results))
     return {"results": recommendations, "message": "OK"}
 
 def run():
