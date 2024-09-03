@@ -22,7 +22,10 @@ def test_query_yields_few_results():
 def test_query_yields_non_obvious_results():
     response = client.get("/query?query=public transport")
     json_response = response.json()
-    
+
+    text = "essential workers".lower()
+    text_is_in_results = any(text in tweet["content"].lower() for tweet in json_response["results"])
+        
     assert response.status_code == 200
-    assert len(json_response["results"]) == 13
+    assert text_is_in_results
     assert json_response["message"] == "OK"
