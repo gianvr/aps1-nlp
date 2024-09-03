@@ -93,7 +93,7 @@ pytest:
 pytest test/test_query.py::test_query_yields_non_obvious_results
 ```
 
-O motivo de ser algo não óbvio é porque apesar do termo "public transport" são retornados tweets que falam não só sobre transporte público, mas sobre outras profissões que são essenciais e não foram interrompidas durante a pandemia. Por esse termo foi possível obter informações sobre profissionais que não pararam de trabalhar durante a pandemia.
+O motivo de ser algo não óbvio é porque apesar do termo "public transport" são retornados tweets que falam não só sobre transporte público, mas sobre outras profissões que são essenciais e não foram interrompidas durante a pandemia. Sendo assim, foi possível encontrar tweets que falam sobre outras profissões que não pararam.
 
 O teste verifica se `essential workers` está presente em algum dos tweets retornados.
 
