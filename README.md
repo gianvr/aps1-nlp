@@ -65,6 +65,11 @@ pytest:
 pytest test/test_query.py::test_query_yields_10_results
 ```
 
+Link:
+```
+http://10.103.0.28:2206/query?query=covid+is+a+hoax
+```
+
 A maioria dos tweets estão relacionados a fala do Donald Trump sobre o Coronavírus ser uma farsa.
 
 ### Teste que retorna mais que 1 e menos que 10 tweets
@@ -79,6 +84,11 @@ pytest:
 pytest test/test_query.py::test_query_yields_few_results
 ```
 
+Link:
+```
+http://10.103.0.28:2206/query?query=covid+and+h1n1
+```
+
 Foram retornados apenas 2 tweets, que falam sobre o Coronavírus e a H1N1.
 
 ### Teste que retorna algo não óbvio
@@ -91,6 +101,11 @@ public transport
 pytest:
 ```bash
 pytest test/test_query.py::test_query_yields_non_obvious_results
+```
+
+Link:
+```
+http://10.103.0.28:2206/query?query=public+transport
 ```
 
 O motivo de ser algo não óbvio é porque apesar do termo "public transport" são retornados tweets que falam não só sobre transporte público, mas sobre outras profissões que são essenciais e não foram interrompidas durante a pandemia. Sendo assim, foi possível encontrar tweets que falam sobre outras profissões que não pararam.
