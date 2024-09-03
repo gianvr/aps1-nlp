@@ -90,6 +90,8 @@ pytest test/test_query.py::test_query_yields_non_obvious_results
 
 O motivo de ser algo não óbvio é porque apesar do termo "public transport" são retornados tweets que falam não só sobre transporte público, mas sobre outras profissões que são essenciais e não foram interrompidas durante a pandemia. Por esse termo foi possível obter informações sobre profissionais que não pararam de trabalhar durante a pandemia.
 
+O teste verifica se `essential workers` está presente em algum dos tweets retornados.
+
 ## Dataset
 
 O dataset utilizado no projeto foi: [CoronaVirus Tweets Dataset](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification?select=Corona_NLP_train.csv).
