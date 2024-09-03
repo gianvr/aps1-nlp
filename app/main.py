@@ -13,7 +13,7 @@ def read_hello():
 
 @app.get("/query")
 def query_route(query: str = Query(..., description="Search query")):
-    results = get_recommendation(query, threshold=.2)
+    results = get_recommendation(query, threshold=.26)
     recommendations = []
     for i, row in results.iterrows():
         recommendations.append(
@@ -23,11 +23,11 @@ def query_route(query: str = Query(..., description="Search query")):
                 "relevance": row["Relevance"],
             }
         )
-        
+    print(len(results))
     return {"results": recommendations, "message": "OK"}
 
 def run():
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("app.main:app", host="127.0.0.1", port=2206, reload=True)
 
 
 if __name__ == "__main__":
